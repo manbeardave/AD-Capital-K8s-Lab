@@ -20,6 +20,11 @@ data:
   ROOKOUT_TOKEN: "<rookout-token>"
   RETRY: 10s
   TIMEOUT: 300s
+  ROOKOUT_LABELS: "env:dave-hines-se-days"
+  ROOKOUT_LOG_TO_STDERR: "True"
+  ROOKOUT_DEBUG: "1"
+  ROOKOUT_COMMIT: "True"
+  ROOKOUT_TOKEN: "1e621051e61fdbdfdb6bc30784ad654038605ff79578949fc36e1d9d7cb3696f"
 kind: ConfigMap
 metadata:
   creationTimestamp: null
