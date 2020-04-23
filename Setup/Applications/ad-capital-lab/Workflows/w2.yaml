@@ -27,9 +27,9 @@ phases:
     name: Deploy
     steps:
     - type: K8S_APPLY
-      name: Apply config and secret
+      name: Apply db
       properties:
-        filePaths: env-configmap.yaml, secret.yaml
+        filePaths: adcapitaldb-deployment.yaml, rabbitmq-deployment.yaml
         stateTimeoutInMinutes: 10
         templateUuid: null
         templateVariables: null
