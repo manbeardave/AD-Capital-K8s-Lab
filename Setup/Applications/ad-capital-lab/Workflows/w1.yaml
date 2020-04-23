@@ -36,13 +36,13 @@ phases:
       properties:
         filePaths: adcapitaldb-deployment.yaml, rabbitmq-deployment.yaml
         stateTimeoutInMinutes: 10
-    - type: K8S_DEPLOYMENT_ROLLING
-      name: Rollout Deployment
     - type: K8S_APPLY
       name: Apply load
       properties:
         filePaths: load-deployment.yaml
         stateTimeoutInMinutes: 10
+    - type: K8S_DEPLOYMENT_ROLLING
+      name: Rollout Deployment
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify
