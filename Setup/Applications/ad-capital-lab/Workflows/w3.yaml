@@ -27,9 +27,9 @@ phases:
     name: Deploy
     steps:
     - type: K8S_APPLY
-      name: Apply CM and Secrets
+      name: Apply Load
       properties:
-        filePaths: env-configmap.yaml, secret.yaml
+        filePaths: load-deployment.yaml
         stateTimeoutInMinutes: 10
     stepsInParallel: false
   - type: K8S_PHASE_STEP
